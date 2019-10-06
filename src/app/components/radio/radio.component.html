@@ -1,0 +1,18 @@
+<label>
+  <input
+    type="radio"
+    [required]="required"
+    [checked]="checked"
+    [name]="name"
+    (input)="change($event)"
+  />
+  <neat-icon
+    [name]="checked ? 'misc-checkbox-on' : 'misc-checkbox-off'"
+    [size]="'small'"
+  >
+  </neat-icon>
+  <span>
+    {{ label }}
+    <ng-content></ng-content>
+  </span>
+</label>

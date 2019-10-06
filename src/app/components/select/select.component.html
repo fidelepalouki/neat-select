@@ -1,0 +1,25 @@
+<label>
+  <div class="left-container">
+    <span class="selected-option">{{ value }}</span>
+    <span class="label">{{ label }}</span>
+  </div>
+  <select
+    #select
+    [required]="required"
+    [value]="value"
+    (click)="opened = true"
+    (change)="change($event)"
+  >
+    <option *ngFor="let option of options" [value]="option">{{
+      option
+    }}</option>
+  </select>
+  <neat-icon [name]="'misc-arrow'" [size]="'xxsmall'"></neat-icon
+></label>
+
+<neat-options
+  [@slideFormRight]="opened ? 'visible' : 'hidden'"
+  [options]="options"
+  [value]="value"
+  (onSelected)="onSelected($event)"
+></neat-options>

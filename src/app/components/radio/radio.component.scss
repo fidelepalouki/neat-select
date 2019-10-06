@@ -1,0 +1,14 @@
+label {
+  display: flex;
+  cursor: pointer;
+  color: var(--color-text-light);
+  input {
+    display: none;
+  }
+  span {
+    display: inline-block;
+    padding-top: 0.1rem;
+    padding-left: 0.5rem;
+    font-family: Pluto-Regular;
+  }
+}

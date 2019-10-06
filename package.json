@@ -10,6 +10,7 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "keywords": ["select", "ui", "angular", "animations"],
   "dependencies": {
     "@angular/animations": "~8.2.4",
     "@angular/common": "~8.2.4",

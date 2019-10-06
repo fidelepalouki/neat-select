@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'fonts.scss';
+
+:root {
+  --color-white: #ffffff;
+  --color-border-bottom: #f0f3f6;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+  font-family: Roboto-Regular;
+}
+
+* {
+  box-sizing: border-box;
+}

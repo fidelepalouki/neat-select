@@ -19,6 +19,6 @@ export class OptionsComponent implements OnInit {
 
   onChange(option: string) {
     this.value = option;
-    this.onSelected.emit(option);
+    this.onSelected.emit(this.value);
   }
 }

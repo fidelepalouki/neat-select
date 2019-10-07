@@ -1,10 +1,12 @@
-<label class="option" *ngFor="let option of options">
-  <span>
-    {{ option }}
-  </span>
-  <neat-radio
-    [checked]="option === value"
-    [name]="name"
-    (valueChange)="onChange(option)"
-  ></neat-radio>
-</label>
+<div class="container">
+  <label class="option" *ngFor="let option of options">
+    <span>
+      {{ option }}
+    </span>
+    <neat-radio
+      [checked]="option === value"
+      [name]="name"
+      (valueChange)="onChange(option)"
+    ></neat-radio>
+  </label>
+</div>

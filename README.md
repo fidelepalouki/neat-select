@@ -1,4 +1,4 @@
-# Source code from the dev.to/fidele137 post [Awesome select using Angular with animations](https://dev.to/fidele137/awesome-select-using-angular-with-animations-4b2d-temp-slug-1233045/edit)
+# Source code from the dev.to/fidele137 post [Neat select using Angular with animations (Part 1)](https://dev.to/fidele137/awesome-select-using-angular-with-animations-4b2d-temp-slug-1233045?preview=5c9aad1dc3f54887990e0fd3e519229cb00c9534f50bc592a92b3b9e9edef376239aca8f50a0ab40b8c14b526fcbb530b8d02f3a1fb32c2d33f4ac28)
 
 ![Neat select demo](src/assets/images/neat3.gif)
 
@@ -12,5 +12,5 @@ Run npm run start to serve the project
 
 # Credits
 
-- Design by [Pierre HUARD]()
+- Design by [Pierre HUARD](https://www.linkedin.com/in/pihuard/)
 - Code by [Fidèle PALOUKI](https://twitter.com/frontdatacloud)

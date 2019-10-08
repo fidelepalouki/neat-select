@@ -38,24 +38,19 @@ export class IconComponent implements OnInit {
   }
 
   private async fetchIcon(): Promise<string> {
-    return new Promise((resolve, reject) => {
-      if (!this.name) return;
-      const iconUrl = `${IconComponent.ICONS_ROOT}/${this.name}.svg`;
+    const iconUrl = `${IconComponent.ICONS_ROOT}/${this.name}.svg`;
 
-      const xhr = new XMLHttpRequest();
-      xhr.addEventListener('load', res => {
-        if ((res.currentTarget as any).status !== 200) {
-          return reject(
-            `Error code ${
-              (res.currentTarget as any).status
-            }, failed to load icon: ${iconUrl}. Check your 'name' attribute.`
-          );
-        }
-        return resolve((res.currentTarget as any).responseText);
-      });
-      xhr.open('GET', iconUrl);
-      xhr.send();
-    });
+    try {
+      const res = await fetch(iconUrl, { cache: 'force-cache' });
+      if (res.status !== 200) {
+        throw new Error(
+          `Error code ${res.status}, failed to load icon: ${iconUrl}. Check your 'name' attribute.`
+        );
+      }
+      return res.text();
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   getClasses(): string {

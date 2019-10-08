@@ -30,8 +30,6 @@ export class RadioComponent implements OnInit, ControlValueAccessor {
   onChange: any = () => {};
   onTouched: any = () => {};
 
-  constructor() {}
-
   ngOnInit() {}
 
   get checked() {

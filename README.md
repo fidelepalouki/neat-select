@@ -1,4 +1,4 @@
-# Source code from the dev.to/fidele137 post [Neat select using Angular with animations (Part 1)](https://dev.to/fidele137/awesome-select-using-angular-with-animations-4b2d-temp-slug-1233045?preview=5c9aad1dc3f54887990e0fd3e519229cb00c9534f50bc592a92b3b9e9edef376239aca8f50a0ab40b8c14b526fcbb530b8d02f3a1fb32c2d33f4ac28)
+# Source code from the dev.to/fidele137 post [Neat and accessible select using Angular with animations (Part 1)](https://dev.to/fidele137/awesome-select-using-angular-with-animations-4b2d-temp-slug-1233045?preview=5c9aad1dc3f54887990e0fd3e519229cb00c9534f50bc592a92b3b9e9edef376239aca8f50a0ab40b8c14b526fcbb530b8d02f3a1fb32c2d33f4ac28)
 
 ![Neat select demo](src/assets/images/neat3.gif)
 

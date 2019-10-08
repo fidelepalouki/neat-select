@@ -6,7 +6,9 @@
   <select
     #select
     [value]="value"
-    (click)="opened = true"
+    [required]="required"
+    (click)="showOptions($event)"
+    (keydown.enter)="showOptions($event)"
     (change)="change($event)"
   >
     <option *ngFor="let option of options" [value]="option">{{
@@ -17,7 +19,7 @@
 ></label>
 
 <neat-options
-  [@slideFormRight]="opened ? 'visible' : 'hidden'"
+  [@slideInOut]="opened ? 'visible' : 'hidden'"
   [options]="options"
   [value]="value"
   (onSelected)="onSelected($event)"

@@ -1,15 +1,19 @@
 :host {
   font-family: Pluto-Regular;
-  // TODO(fpa): remove fixed width
-  width: 272px;
+  max-width: 272px;
 
   label {
     position: relative;
     height: 64px;
+    overflow: hidden;
     display: grid;
     grid-gap: 1rem;
     align-items: center;
     grid-template-columns: auto 64px;
+
+    &:focus-within {
+      outline: var(--outline);
+    }
 
     .left-container {
       display: flex;
@@ -37,14 +41,16 @@
     }
 
     select {
-      display: none;
+      opacity: 0;
+      position: absolute;
       width: 100%;
       height: 100%;
+      z-index: -1;
       &:focus {
         outline: none;
       }
       option {
-        color: red;
+        display: none;
       }
     }
 

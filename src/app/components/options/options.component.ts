@@ -10,7 +10,7 @@ export class OptionsComponent {
   @Input() options: string[] = [];
   name = Date.now().toString();
 
-  @Output() onSelected = new EventEmitter<any>();
+  @Output() onSelected = new EventEmitter<string>();
 
   onChange(option: string) {
     this.value = option;

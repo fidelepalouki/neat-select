@@ -2,8 +2,12 @@ label {
   display: flex;
   cursor: pointer;
   color: var(--color-text-light);
+  &:focus-within {
+    outline: var(--outline);
+  }
   input {
-    display: none;
+    opacity: 0;
+    position: absolute;
   }
   span {
     display: inline-block;

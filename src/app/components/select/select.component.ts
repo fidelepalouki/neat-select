@@ -27,17 +27,19 @@ import {
     }
   ],
   animations: [
-    trigger('slideFormRight', [
+    trigger('slideInOut', [
       state(
         'visible',
         style({
-          transform: 'translateX(0)'
+          transform: 'translateX(0)',
+          visibility: 'visible'
         })
       ),
       state(
         'hidden',
         style({
-          transform: 'translateX(100%)'
+          transform: 'translateX(100%)',
+          visibility: 'hidden'
         })
       ),
       transition('hidden => visible', animate('0.2s ease-out')),
@@ -95,5 +97,10 @@ export class SelectComponent implements OnInit {
   onSelected(option: string) {
     this.writeValue(option);
     this.opened = false;
+  }
+
+  showOptions(event: any) {
+    event.preventDefault();
+    this.opened = true;
   }
 }

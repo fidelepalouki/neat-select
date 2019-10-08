@@ -2,7 +2,9 @@
 
 :root {
   --color-white: #ffffff;
-  --color-border-bottom: #f0f3f6;
+  --color-gray: #f0f3f6;
+
+  --outline: 3px solid var(--color-gray);
 }
 
 html,

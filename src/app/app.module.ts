@@ -8,6 +8,8 @@ import { SelectComponent } from './components/select/select.component';
 import { OptionsComponent } from './components/options/options.component';
 import { IconComponent } from './components/icon/icon.component';
 import { RadioComponent } from './components/radio/radio.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,14 @@ import { RadioComponent } from './components/radio/radio.component';
     IconComponent,
     RadioComponent
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

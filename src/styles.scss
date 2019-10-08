@@ -12,9 +12,12 @@ body {
   height: 100%;
   margin: 0 auto;
   position: relative;
+  font-family: Roboto-Regular;
+}
+
+body {
   max-width: 420px;
   overflow-x: hidden;
-  font-family: Roboto-Regular;
 }
 
 * {

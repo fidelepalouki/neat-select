@@ -14,6 +14,7 @@ import {
   transition,
   animate
 } from '@angular/animations';
+import { OptionsComponent } from '../options/options.component';
 
 @Component({
   selector: 'neat-select',
@@ -42,8 +43,8 @@ import {
           visibility: 'hidden'
         })
       ),
-      transition('hidden => visible', animate('0.2s ease-out')),
-      transition('visible => hidden', animate('0.2s ease-in'))
+      transition('hidden => visible', animate('0.3s ease-out')),
+      transition('visible => hidden', animate('0.3s ease-in'))
     ])
   ]
 })
@@ -97,6 +98,7 @@ export class SelectComponent implements OnInit {
   onSelected(option: string) {
     this.writeValue(option);
     this.opened = false;
+    this.select.nativeElement.focus();
   }
 
   showOptions(event: any) {

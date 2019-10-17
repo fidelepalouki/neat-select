@@ -51,6 +51,11 @@
       }
       option {
         display: none;
+        // hack for ios because display none is not enough
+        opacity: 0;
+        height: 0;
+        width: 0;
+        overflow: hidden;
       }
     }
 

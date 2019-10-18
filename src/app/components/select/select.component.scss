@@ -46,16 +46,18 @@
       width: 100%;
       height: 100%;
       z-index: -1;
+      @supports (-webkit-overflow-scrolling: touch) {
+        /* CSS specific to iOS devices */
+        // For iOS devices because it shows the native options even if they are display: none
+        // So we hide the select (not ay11 friendly)
+        // I will try to fix this issue for iOS
+        display: none;
+      }
       &:focus {
         outline: none;
       }
       option {
         display: none;
-        // hack for ios because display none is not enough
-        opacity: 0;
-        height: 0;
-        width: 0;
-        overflow: hidden;
       }
     }
 

@@ -73,6 +73,10 @@ export class SelectComponent implements OnInit, ControlValueAccessor {
     this.onTouched(val);
   }
 
+  get iOS() {
+    return !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+  }
+
   writeValue(value: any) {
     this.value = value;
   }
@@ -97,7 +101,12 @@ export class SelectComponent implements OnInit, ControlValueAccessor {
   onSelected(option: string) {
     this.writeValue(option);
     this.opened = false;
-    this.select.nativeElement.focus();
+    // For iOS devices, a focus create a zoom on the select, which is bothering
+    // In this case we don't give the focus back to the select (not ay11 friendly)
+    // I'am trying to find a solution for this issue on iOS
+    if (!this.iOS) {
+      this.select.nativeElement.focus();
+    }
   }
 
   showOptions(event: any) {
